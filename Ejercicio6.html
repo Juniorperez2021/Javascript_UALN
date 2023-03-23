@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Colaborativa_Ejercicio 6</title>
+</head>
+<body>
+
+    <!-- Es una especie de pequeño formulario que valora el numero y letra que ingresemos para que coincidan con las condiciones correctas o aceptadas -->
+
+    <script type="text/javascript">
+
+        let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+        let numero = prompt("Introduzca su numero del DNI (Solo se acepta numeros, no letras)")
+
+        let letra = prompt ("Introduzca una letra de su DNI (Solo se aceptan letras Mayusculas)");
+        letra = letra.toUpperCase();
+
+        if(numero < 0 || numero > 99999999){
+            alert("El numero proporcionado no es valido");
+        }else{
+            let calculoletra = letras [numero % 23];
+            if(calculoletra != letra){
+                alert("La letra o numero que fueron introducidos son incorrectos");
+            }else{
+                alert("El numero del DNI y su letra fueron introducidos correctamente");
+            }
+        }
+    </script>
+
+    <h1>Ejercicio 6</h1>
+
+</body>
+</html>
